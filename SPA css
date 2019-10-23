@@ -1,0 +1,218 @@
+body
+{
+ font-family: sans-serif, cursive;
+ margin: 0;
+ height: auto;
+}
+
+main
+{
+  width: 80%;
+  margin: auto;
+}
+
+#landing
+{
+  background-color: antiquewhite;
+}
+
+#landing-text
+{
+ display: flex;
+ flex: 40vw;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ height: 50vh;
+ padding: 20px;
+}
+
+#landing-image
+{
+ background-image: url(../images/Beach.jfif);
+ background-position: center;
+ background-repeat: no-repeat;
+ height: 50vh;
+ margin: 0;
+}
+
+h1
+{
+ font-weight: 2.5rem;
+ text-transform: uppercase;
+ margin: 0;
+}
+
+h2
+{
+ font-weight: 1.5rem;
+ text-transform: capitalize;
+ margin: 0;
+ color: darkorchid;
+}
+
+.btn1
+{
+  padding: 0.5rem 0.5rem;
+  border: 1px ccc solid;
+  display: inline-block;
+  margin: 2rem 0 0 0;
+  border-radius: 50px;
+  color: cadetblue;
+  background: white;
+  text-decoration: none;
+  transition: background 1000ms ease;
+  font-weight: bold;
+}
+
+.btn1:hover 
+{
+ background-color: dimgrey;
+ color: bisque;
+
+}
+
+.header
+{
+ background-color: grey;
+ text-align: center;
+ padding: 1rem;
+}
+
+.header h2
+{
+ color: white;
+ font-size: 1.2rem;
+ font-weight: bold;
+}
+
+img
+{
+ display: block;
+ width: 100%;
+ height: auto;
+}
+
+figcaption
+{
+ text-align: center; 
+}
+
+figure
+{
+ text-align: center;
+ font-weight: bold;
+}
+
+.caption
+{
+ text-align: left;
+}
+
+.box
+{
+ width: 33.3%;
+ float: left;
+ display: inline-block;
+ border: 1px solid grey;
+ padding: 10px;
+ height: 250px;
+ box-sizing: border-box;
+}
+
+footer
+{
+ background-color: grey;
+ color: white;
+ padding: 10px;
+ text-align: center;
+}
+
+.clear
+{
+ clear: both;
+}
+
+#formdiv
+{
+ width: 75%;
+ float: left;
+}
+
+.myform
+{
+ padding: 20px;
+}
+
+.myform label
+{
+ display: block;
+}
+
+ address
+{
+ display: block;
+ color: darkgray;
+ border: 2px solid blue;
+ padding: 10px;
+}
+  
+#addressdiv
+{
+ width: 25%;
+ float: left;
+ margin-top: 45px;
+}
+
+#iframemap
+{
+ padding: 20px;
+}
+
+.button
+{
+ background-color: darkgray;
+ color: brown;
+ padding: 10px;
+ color: white;
+}
+
+/* bootstrap */
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+#fixbtn
+{
+  position: fixed;
+  top: 300px;
+  margin-left: -70px;
+}
