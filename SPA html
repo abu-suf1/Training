@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+
+<head>
+ <title> Natural Photography </title>
+ <meta charset="utf-8">
+ <meta name="description" content="Web Development, Software Development">
+ <meta name="keywords" content="ntml5, css3, front end development">
+ <meta name="viewport" content="width=device-width, intial-scale=1.0">
+ <link rel="stylesheet" href="css/myStyles.css">
+
+ <!------ Include the above in your HEAD tag ---------->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+ <main>
+
+<section id="home">
+  <div id="landing">
+   <!-- The landing page -->
+   <div id="landing-text">
+    <h1> Natural Photography </h1>
+    <h2> Beautiful Natural Scenes... </h2>
+    <div>
+     <a href="#portfolio" class="btn1"> Portfolio</a>
+     <a href="#news" class="btn1"> News</a>
+     <a href="#experience" class="btn1"> Experience</a>
+     <a href="#contact" class="btn1"> Contact</a>
+    </div>
+   </div>
+
+   <div id="landing-image">
+
+
+   </div>
+
+  </div>
+</section>
+ 
+  <!-- The Portofolio Section -->
+  <section id="portfolio">
+   <div class="header">
+    <h2> Portfolio </h2>
+   </div>
+
+
+   <img src="images/Mountains.jfif" alt="Mountains">
+   <div>
+    <h3> Beautiful Mountain </h3>
+    <p> One of the most beautiful mountains in the world </p>
+   </div>
+
+
+   <img src="images/Trees.jfif" alt="Trees">
+   <div>
+    <h3> A Tree View </h3>
+    <p> A view of the trees </p>
+   </div>
+
+   <img src="images/Beach.jfif" alt="Sunset">
+   <div>
+    <h3> A Nice View</h3>
+    <p> A view of the Sunset </p>
+   </div>
+  </section>
+
+  <!-- The News Section -->
+  <section id="news">
+   <div class="header">
+    <h2> Latest News... </h2>
+   </div>
+
+   <article class="box">
+    <h3> Science and Enviroment </h3>
+    <p>
+     Bezos floats 'national team' to build Moon lander
+     <a href="https://www.bbc.co.uk/news/science_and_environment"> Read More... </a>
+    </p>
+   </article>
+
+   <article class="box">
+    <h3> Breaking Stories </h3>
+    <p>
+     Visit BBC News for up-to-the-minute news, breaking news, video, audio and feature stories. ... The latest global news, sport, weather and documentaries.
+     <a href="https://www.bbc.co.uk/news"> Read More... </a>
+    </p>
+   </article>
+
+   <article class="box">
+    <h3> Environment News </h3>
+    <p>
+     A new study suggests that a switch to 100% organic food production in England and Wales would see an overall increase in greenhouse gas emissions.
+     <a href="https://www.bbc.co.uk/news/science-environment-50129353"> Read More... </a>
+    </p>
+   </article>
+  </section>
+
+  <div class="clear">
+
+  </div>
+
+  <!-- The Experience Section -->
+  <section id="experience">
+   <div class="header">
+    <h2> Experience </h2>
+   </div>
+
+   <!-- Bootstrap -->
+    <div class="row">
+     <div class="col-md-6 offset-md-3">
+      <h4>Latest News</h4>
+      <ul class="timeline">
+       <li>
+        <a target="_blank" href="https://www.totoprayogo.com/#">New Web Design</a>
+        <a href="#" class="float-right">21 March, 2014</a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+       </li>
+       <li>
+        <a href="#">21 000 Job Seekers</a>
+        <a href="#" class="float-right">4 March, 2014</a>
+        <p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+       </li>
+       <li>
+        <a href="#">Awesome Employers</a>
+        <a href="#" class="float-right">1 April, 2014</a>
+        <p>Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla odio, tincidunt vitae nunc vitae, mollis pharetra velit. Sed nec tempor nibh...</p>
+       </li>
+      </ul>
+     </div>
+    </div>
+  </section>
+
+   <!-- The Contact Section -->
+   <section id="contact">
+    <div class="header">
+     <h2> Contact Details </h2>
+    </div>
+
+    <div id="formdiv">
+
+     <form method="post" action="mailto:test1@gmail.com" enctype="text/plain" class="myform">
+      <div>
+       <label> Name: </label>
+       <input type="text" name="Name" required>
+      </div>
+      <div>
+       <label> Age: </label>
+       <input type="number" name="Age" required>
+      </div>
+      <div>
+       <label> Email: </label>
+       <input type="text" name="Email" required>
+      </div>
+
+
+      <div>
+       <label> Gender:</label>
+       Male <input type="radio" name="gender" value="male">
+       Female <input type="radio" name="gender" value="female">
+       Other <input type="radio" name="gender" value="Other">
+      </div>
+
+      <div>
+       <textarea name="message"> </textarea>
+      </div>
+
+      <input type="submit" value="Submit" class="button">
+     </form>
+    </div>
+
+    <div id="addressdiv">
+     <address>
+      Just IT Training and Apprenticeship <br>
+      2nd Floor <br>
+      St Clares <br>
+      London <br>
+      EC3N 1DD <br>
+      Phone: <a href="0208 0255 2525"> 0208 0255 2525 </a><br>
+      Email: <a href="askthedevexpert@justit.co.uk"> askthedevexpert@justit.co.uk </a><br>
+     </address>
+    </div>
+
+    <hr width="60%">
+
+    <iframe id="iframemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.053619324286!2d-0.07733968422984527!3d51.51223227963594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876034b9e38b219%3A0xee52eb64a0af3ec9!2sSaint%20Clare%20House%2C%20Minories%2C%20London!5e0!3m2!1sen!2suk!4v1571752221537!5m2!1sen!2suk" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+   </section>
+
+   <div class="clear"> </div>
+
+<div id="fixbtn">
+  <a href="#home" class="btn1"> Home </a>
+</div>
+  
+   <!--The Footer Section -->
+   <footer>
+    <p>&copy; JustIT Training and Apprenticeship, 2019</p>
+   </footer>
+
+ </main>
+</body>
+
+</html>
