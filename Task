@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ABC Webb Design</title>
+    <link rel=stylesheet href="css/taskstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+</head>
+
+
+
+<body>
+
+
+    <header>
+
+        <h2><span class="orange-span">ABC</span><span class="white-span"> Web Design</span> </h2>
+
+        <div class="menu-header">
+            <a id="current" href="index.html">Home</a>
+            <a href="about.html">About </a>
+            <a href="services.html">Services</a>
+        </div>
+    </header>
+
+
+
+
+
+
+    <div id="imagetext">
+
+        <h1>Affordable Web Tailored To Your Needs</h1>
+        <p> Get A Quote TodaySave Up To 75% Get Your Dream Website. Tell Us Your Project. 1 Minute Quote Service.</p>
+    </div>
+
+
+
+
+    <div id="subscriber">
+        <h2 id="form-title">Subscribe to monthly newsletter</h2>
+        <form id="join-newsletter">
+            <input type="text" placeholder="enter your email">
+            <input type="submit" id="join-btn" value="subscribe">
+        </form>
+    </div>
+
+
+    <div class="article-container">
+        <article>
+            <img class="article-image" src="IMAGES/html5logo.jpg">
+            <h2>HTML 5</h2>
+            <p> Some jargon about web design </p>
+        </article>
+        <article>
+            <img class="article-image" src="IMAGES/css3logo.jpg">
+            <h2>CSS</h2>
+            <p> Some jargon about web design </p>
+        </article>
+        <article>
+            <img class="article-image" src="IMAGES/JS-Logo.jpg">
+            <h2>JavaScript</h2>
+            <p> Some jargon about web design </p>
+        </article>
+    </div>
+
+
+
+
+
+
+    <footer>
+        <p style="text-align:center">ABC Web Designer and Developer &copy;2018</p>
+    </footer>
+
+
+
+</body>
+
+</html>
