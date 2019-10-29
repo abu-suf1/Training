@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title> Calculator </title>
+</head>
+
+<body>
+    <h1> Calculator </h1>
+
+    
+    <input type="number" id="input1"> <br>
+    <input type="number" id="input2">
+    <p id="result"> </p>
+    
+    <div>
+        <button id="sum" onclick="main1('s')"> Sum </button>
+        <button id="divide" onclick="main1('d')"> Divide </button>
+        <button id="subtract" onclick="main1('t')"> Subtract </button>
+        <button id="multiply" onclick="main1('m')"> Multiply </button>
+    </div>
+    
+    
+    <script>
+//        var event1 = document.getElementById("sum");
+//        event1.addEventListener('click', sum);
+        
+        //Function for addition
+        function main1(choice)
+            {
+                switch(choice)
+                    {
+                        case 's':
+                        var result=sum(Number(input1.value), Number(input2.value));
+                        break;
+                        case 'd':
+                        var result=divide(Number(input1.value), Number(input2.value));
+                        break;
+                        case 't':
+                        var result=subtract(Number(input1.value), Number(input2.value));
+                        break;                       
+                        case 'm':
+                        var result=multiply(Number(input1.value), Number(input2.value));
+                        break;                                                        
+                    }
+                document.getElementById("result").innerHTML = result;           
+              } 
+            
+//            var a, b, result;
+//            a = Number(input1.value); 
+//            b = Number(input2.value);
+//            result = sum(a, b);
+//            document.getElementById("result").innerHTML=result;
+        
+        
+        function sum(num1, num2)
+        {
+              result = num1 + num2;
+              return result;
+//            var number1 = Number(document.getElementById("input1").value);
+//            var number2 = Number(document.getElementById("input2").value);
+//            var result = number1 + number2;
+//            document.getElementById("result").innerHTML = result;
+        }
+        
+        //Function for division
+        function main2()
+        {
+            var a, b, result;
+            a = Number(input1.value); 
+            b = Number(input2.value);
+            result = divide(a, b);
+            document.getElementById("result").innerHTML=result;
+        }
+        
+        
+        function divide(num1, num2)
+        {
+              result = num1 / num2;
+              return result;
+        }
+        
+        
+        //Function for subtraction
+        function main3()
+        {
+            var a, b, result;
+            a = Number(input1.value); 
+            b = Number(input2.value);
+            result = subtract(a, b);
+            document.getElementById("result").innerHTML=result;
+        }
+        
+        
+        function subtract(num1, num2)
+        {
+              result = num1 - num2;
+              return result;
+        }
+        
+        
+        //Function for multiplication
+        function main4()
+        {
+            var a, b, result;
+            a = Number(input1.value); 
+            b = Number(input2.value);
+            result = multiply(a, b);
+            document.getElementById("result").innerHTML=result;
+        }
+        
+        
+        function multiply(num1, num2)
+        {
+              result = num1 * num2;
+              return result;
+        }
+    
+    </script>
+    
+    </body>    
+
+</html>
