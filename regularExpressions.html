@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title> Regular Expressions </title>
+</head>
+
+<body>
+   
+    <h1> Regular Expressions </h1>
+    <p> Search for a string for "Javascript is fun", and display the position of the match: </p>
+    <p id="demo"> </p>
+    <p id="demo2"> </p>
+    <button onclick="myFunction()"> Try Regex </button>
+        
+        <script>
+            
+        function myFunction()
+        {
+            
+            var str = "Javascript is fun";
+            
+            //i for case insensitive and g for case sensitive
+            var n = str.search(/fun/i);
+            document.getElementById("demo").innerHTML=n;
+            //console.log(n);
+            
+            var rep= str.replace("fun", "not easy");
+            document.getElementById("demo2").innerHTML=rep;
+        }
+    
+        </script>
+    
+        <hr>
+        
+        <h2> To search for 'e' characters </h2>
+        <p> Click the button to do a global search for the character "e" in a string. </p>
+        <button onclick="searchChar()"> Search </button>
+        <p id="chars"> </p>
+        
+        <script>
+            
+            function searchChar()
+            {
+                var str ="Click the button to do a global search for the character e in a string.";
+                var patr = /e/i;
+                var result = str.match(patr);
+                document.getElementById("chars").innerHTML=result;
+            }
+       
+        </script>
+        
+        <hr>
+        
+        <input type="text" id="input1">
+        <button id="btn1" onclick="checkN()"> Check Number </button>
+        <p id="test1"> </p>
+        <p id="test"> </p>
+        
+        <script>
+            
+            function checkN()
+            {
+                var str = document.getElementById("input1").value;
+                var patr= /^\d+$/;
+                if (str.search(patr)==0)
+                {
+                   document.getElementById("test").innerHTML= str + " is a number ";
+                }
+                else
+                {
+                   document.getElementById("test").innerHTML= str + " is NOT a number";
+                }
+            }
+    
+        </script>
+    
+    </body>    
+
+</html>
