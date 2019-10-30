@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title> Error Handling </title>
+</head>
+
+<body>
+   
+    <h1> Error Handling in JS </h1>
+    
+    <p id="demo"> </p>
+    
+        <script>
+            try
+            {
+                alert("Welcome to JS Programming");
+            }
+            catch(er)
+            {
+                document.getElementById("demo").innerHTML= er.message+"<br> Sorry, there is something wrong with the server";
+            }
+       
+        </script>
+        
+        <hr>
+        
+        <input type="text" id="input1">
+        <button onclick="checkN()"> Check </button>
+        <p id="msg">  </p>
+        
+        <script>
+            
+        function checkN()
+        {
+            var x = document.getElementById("input1").value;
+            
+                
+            try{
+                if(x=="") throw "empty";
+                if(isNaN(x)) throw "Not a number";
+                if(x<18) throw "Too young to drive";
+                if(x>65) throw "Please book an Uber";
+                if(x>=18 && x<=65) throw "Please drive carefully!";
+               }
+            
+            catch(er)
+            {
+                document.getElementById("msg").innerHTML=" Input is: " +er;
+            }
+        }
+        </script>
+    
+    </body>    
+
+</html>
