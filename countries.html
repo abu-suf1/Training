@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Countries</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <h1>Countries</h1>
+
+    <input type="text" id="input">
+    <button id="search" onclick="search(input.value)">Search</button>
+    <p id="result"></p>
+    <br>
+    <button id="displayAll" onclick="displayAll()">Display All</button>
+    <p id="display"></p>
+    <script>
+        var countries = ["UK", "France", "Germany", "Poland", "Spain", "Italy", "Portugal", "India", "China", "Russia", "USA"];
+        var newInput;
+        var isDisplayed = false;
+        
+        function search(input) {
+            //Converting input to the correct case if necessary.
+            if (input.length <= 3) {
+                newInput = input.toUpperCase();
+            } else {
+                newInput = input.charAt(0).toUpperCase() + input.slice(1);
+            }
+
+            //Finding the index of the input.
+            var found = countries.indexOf(newInput);
+
+            //Displaying the result.
+            if (found != -1) {
+                document.getElementById("result").innerHTML = newInput + "<br>";
+                document.getElementById("result").innerHTML += found;
+            } else {
+                document.getElementById("result").innerHTML = "country not found";
+            }
+        }
+
+        function displayAll() {
+            if (isDisplayed == false) {
+                for (i = 0; i < countries.length; i++) {
+                    document.getElementById("display").innerHTML += countries[i] + "<br>";
+                }
+                document.getElementById("displayAll").innerHTML = "Hide All";
+                isDisplayed = true;
+            } else {
+                document.getElementById("display").innerHTML = '';
+                document.getElementById("displayAll").innerHTML = "Display All";
+                isDisplayed = false;
+            }
+        }
+
+        //Call the button's onClick event if the 'enter' key is pressed.
+        var inputEvent = document.getElementById("input");
+        inputEvent.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("search").click();
+            }
+        });
+    </script>
+</body>
+</html>
