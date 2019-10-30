@@ -1,0 +1,53 @@
+<html>
+<head> 
+<title> Arrays Task </title>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+</head>
+    
+<body style="color:white; background-color:black;">
+    <h1>Array of Countries</h1>
+
+    <input type="text" id="input1">
+
+    <button type="submit" onclick="getCountry(input1.value)">Search Country</button>
+    
+    <div id="countryresult"></div>
+
+    <hr>
+   
+    <button type="submit" onclick="listCountry()">Show All Countries</button>   
+    <div id="listcountries"></div>
+       
+    <script>      
+        var country = ["Thailand","England","France","Mauritius", "Mozambique",'Italy','Malawi', 'Kenya', 'Thailand','Singapore','Malaysia'];
+        
+        function getCountry(p_country)
+        {
+            for (i=0; i<country.length;i++)
+                {
+        document.getElementById("countryresult").innerHTML="No result for "+ p_country+".";
+            if (country[i].toUpperCase() == p_country.toUpperCase() )
+        {
+         document.getElementById("countryresult").innerHTML=country[i]+" has been found.<br> Location in array is " + i + ".";
+             break;
+        }
+                    
+    } 
+        }
+
+        function listCountry()
+        {
+            var text;
+            text="<ul>";
+            for (i=0; i<country.length;i++)
+                {
+                    text+="<li>"+country[i]+"</li>";
+                }
+            text+="</ul>";
+            document.getElementById("listcountries").innerHTML=text;
+        }
+        
+    </script>
+</body>
+</html>
