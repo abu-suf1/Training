@@ -1,0 +1,67 @@
+<html>
+<head> 
+<title> Objects Array in JS </title>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+</head>
+    
+<body>
+    <h1> Objects Array in JS </h1>
+    
+    <p id="customer"> </p>
+    
+        <script>
+        
+            var customers=[
+                {
+                  name: "John Doe",
+                  age: 28,
+                  gender: "Male",
+                  image: "Dice-1.png"
+                },
+                {
+                  name: "Jane Smith",
+                  age: 31,
+                  gender: "Female",
+                  image: "Dice-2.png"
+                },
+                {
+                  name: "Bob Teller",
+                  age: 48,
+                  gender: "Male",
+                  image: "Dice-3.png"
+                },
+                {
+                  name: "Mike Brewer",
+                  age: 54,
+                  gender: "Male",
+                  image: "Dice-4.png"
+                },
+                {
+                  name: "Susan Perkins",
+                  age: 33,
+                  gender: "Female",
+                  image: "Dice-5.png"
+                }
+            ];
+            
+            console.log(customers);
+            customers = JSON.stringify(customers);
+            console.log(jcustomers);
+            customers = JSON.parse(customers);
+            
+            
+            var table = "<table border = '2px' width = '65%'> <thead><tr> <th>Name</th> <th>Age</th> <th>Gender</th> <th>Image</th> </tr> </thead><tbody>";
+            for(i=0; i<customers.length; i++)
+            {
+                //document.getElementById("customer").innerHTML += customers[i].name + " is aged " + customers[i].age + " and is " + customers[i].gender + "<br>";
+                table += "<tr><td align='middle'>"+customers[i].name+"</td> <td align='middle'>"+customers[i].age+"</td> <td align='middle'>"+customers[i].gender+"</td> <td align='middle'>"+ "<img src='images/" + customers[i].image+"' width='80px' height='80px' ></img> </td> </tr>";         
+            }
+            table+="</tbody></table>";
+            
+            document.getElementById("customer").innerHTML=table;
+            //document.getElementById("customer").innerHTML=customers[1].name + " " + customers[1].age;
+                    
+       </script>
+</body>
+</html>
