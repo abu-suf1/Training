@@ -1,0 +1,44 @@
+<html>
+<head> 
+<title> Objects Constructor in JS </title>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+</head>
+    
+<body>
+    <h1> Object Constructor in JS </h1>
+    
+    <p id="demo"> </p>
+    <p id="demo2"> </p>
+    <p id="demo3"> </p>
+    
+        <script>
+        
+            function students(id, name, age, gender)
+            {
+                this.stdid=id,
+                this.name=name,
+                this.age=age,
+                this.gender=gender
+            }
+
+            var student1 = new students(101, "Suleman", 28, "Male");
+            var student2 = new students(102, "Thomas", 25, "Male");
+            var student3 = new students(103, "Ryan", 30, "Male");
+//            document.getElementById("demo").innerHTML= student1.stdid + " " + student1.name + " " + student1.age + " " + student1.gender;
+//            document.getElementById("demo2").innerHTML= student2.stdid + " " + student2.name + " " + student2.age + " " + student2.gender;
+//            document.getElementById("demo3").innerHTML= student3.stdid + " " + student3.name + " " + student3.age + " " + student3.gender;
+            
+            var allstudents=[];
+            allstudents[0]= new students(101, "Suleman", 28, "Male");
+            allstudents[1]= new students(102, "Thomas", 25, "Male");
+            allstudents[2]= new students(103, "Ryan", 30, "Male");
+            
+            for(i=0; i<students.length; i++)
+                {
+                    document.getElementById("demo").innerHTML+=allstudents[i].stdid + " " + allstudents[i].name + " " + allstudents[i].age + " " + allstudents[i].gender + "<br>";
+                }
+                    
+       </script>
+</body>
+</html>
