@@ -1,0 +1,48 @@
+<html>
+<head> 
+<title> Finding numbers and characters </title>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+</head>
+    
+<body>
+    <h1> Finding numbers and characters </h1>
+
+    <input type="text" id="input1">
+    <button id="btn" onclick=checkMe()> Search </button>
+    <p id="vowels"> </p>
+    <p id="numbers"> </p>
+    <p id="consts"> </p>
+    
+    <script>
+        function checkMe()
+        {
+            var str = document.getElementById("input1").value;
+            
+            var vowels="Vowels: ";
+            var consts="Consonants: ";
+            var numbers="Numbers: ";
+            
+            for(var i=0;i<str.length;i++)
+                {
+                    if(str[i].match(/[aeiou]/gi))
+                    {
+                            vowels+=str[i];
+                    }
+                    else if(str[i].match(/^[0-9]+$/)!=null)
+                    {
+                            numbers+=str[i];
+                    }
+                    else if(str[i].match(/^[a-zA-Z]+$/)!=null)
+                    {
+                            consts+=str[i];
+                    }
+                }
+            document.getElementById("vowels").innerHTML=vowels;
+            document.getElementById("consts").innerHTML=consts;
+            document.getElementById("numbers").innerHTML=numbers;
+        }
+            
+    </script>
+</body>
+</html>
