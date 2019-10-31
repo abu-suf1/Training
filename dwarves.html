@@ -1,0 +1,93 @@
+<html>
+<head> 
+<title> Dwarfs in JS </title>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+</head>
+    
+<body>
+    <h1> Dwarfs in JS </h1>
+    
+    <p id="dwarf"> </p>
+    <p id="result"></p>
+    
+        <script>
+        
+            var dwarfs=[
+                {
+                  name: "Happy",
+                  age: Math.ceil(Math.random()*50),
+                  gender: "Male",
+                  image: "dwarf-happy.png"
+                },
+                {
+                  name: "Dopey",
+                  age: Math.ceil(Math.random()*50),
+                  gender: "Male",
+                  image: "dwarf-dopey.png"
+                },
+                {
+                  name: "Bashful",
+                  age: Math.ceil(Math.random()*50),
+                  gender: "Male",
+                  image: "dwarf-bashful.png"
+                },
+                {
+                  name: "Sneezy",
+                  age: Math.ceil(Math.random()*50),
+                  gender: "Male",
+                  image: "dwarf-sneezy.png"
+                },
+                {
+                  name: "Doc",
+                  age: Math.ceil(Math.random()*50),
+                  gender: "Male",
+                  image: "dwarf-doc.png"
+                },
+                {
+                  name: "Grumpy",
+                  age: Math.ceil(Math.random()*50),
+                  gender: "Male",
+                  image: "dwarf-grumpy.png"
+                },
+                {
+                  name: "Sleepy",
+                  age: Math.ceil(Math.random()*50),
+                  gender: "Male",
+                  image: "dwarf-sleepy.png"
+                }
+            ];
+                   
+//            console.log(dwarfs);
+//            dwarfs = JSON.stringify(dwarfs);
+//            console.log(dwarfs);
+//            dwarfs = JSON.parse(dwarfs);
+            
+            
+            var table = "<table border = '2px' width = '65%'> <thead><tr> <th>Name</th> <th>Age</th> <th>Gender</th> <th>Image</th> </tr> </thead><tbody>";
+            for(i=0; i<dwarfs.length; i++)
+            {
+                //document.getElementById("customer").innerHTML += customers[i].name + " is aged " + customers[i].age + " and is " + customers[i].gender + "<br>";
+                table += "<tr><td align='middle'>"+dwarfs[i].name+"</td> <td align='middle'>"+dwarfs[i].age+"</td> <td align='middle'>"+dwarfs[i].gender+"</td> <td align='middle'>"+ "<img src='images/" + dwarfs[i].image+"' width='50px' height='60px' ></img> </td> </tr>";         
+            }
+            table+="</tbody></table>";
+            
+            var oldestDwarf = 0;
+            for(i=0; i< dwarfs.length; i++)
+                {
+                    console.log(dwarfs[i].age);
+                    
+                    if(dwarfs[i].age > oldestDwarf)
+                        {
+                            oldestDwarf = dwarfs[i].age;
+                            oldestDwarfName = dwarfs[i].name;
+                        }
+                }
+            
+            document.getElementById("dwarf").innerHTML=table;
+            //document.getElementById("customer").innerHTML=customers[1].name + " " + customers[1].age;
+            document.getElementById("result").innerHTML= "The oldest dwarf is" + " " + oldestDwarfName + " " + "who is aged" + " " + oldestDwarf;
+                    
+       </script>
+</body>
+</html>
