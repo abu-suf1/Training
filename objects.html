@@ -1,0 +1,42 @@
+<html>
+<head> 
+<title> Objects in JS </title>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+</head>
+    
+<body>
+    <h1> Objects in JS </h1>
+    
+    <p id="students"> </p>
+    <p id="address"> </p>
+    <p id="kids"> </p>
+    
+        <script>
+            
+            var students=
+            {
+                fname: "Jason",
+                lname: "Smith",
+                age: 37,
+                address:
+                {
+                 street: "33 Minories",
+                 city: "London",
+                 postcode: "EC13 1LN"
+                },
+                children: ["Briana", "Nicholas"],
+                name: function()
+                {
+                    return this.fname + " " + this.lname;
+                }
+            }
+    
+            document.getElementById("students").innerHTML = students.fname + " " + students.lname + " " + "age: "  + students.age;
+            document.getElementById("address").innerHTML = students.address.city + " " + students.address.postcode;
+            document.getElementById("kids").innerHTML = students.name() + " has children: " + students.children[0] + " and " + students.children[1];
+                
+        </script>
+        
+</body>
+</html>
