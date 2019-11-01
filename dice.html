@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title> Dice Game </title>
+</head>
+
+<body onload="rollDice()">
+    <h1>Dice Game</h1>
+       
+    <h3 id="test"></h3>
+              
+    <img id="myImg" src="images/Dice-1.png" alt="random dice" width="240px" height="240px"><br>
+    <br>
+    
+    <button onclick="rollDice()"> Click Me </button>  
+               
+    <script>      
+        function rollDice()
+        {
+        var number, dice;
+        
+        number = Math.ceil(Math.random()*6);
+                
+        switch(number)
+            {
+                case 1:
+                    dice='images/Dice-1.png';
+                    break;
+                case 2:
+                    dice='images/Dice-2.png';
+                    break;
+                case 3:
+                    dice='images/Dice-3.png';
+                    break;
+                case 4:
+                    dice='images/Dice-4.png';
+                    break;
+                case 5:
+                    dice='images/Dice-5.png';
+                    break;
+                case 6: 
+                    dice='images/Dice-6.png';
+                    break;
+            }
+        
+        document.getElementById('test').innerHTML= 'Dice rolled is ' + number;
+            
+        document.getElementById('myImg').src=dice;            
+            
+        }
+    </script>
+    
+    </body>    
+
+</html>
